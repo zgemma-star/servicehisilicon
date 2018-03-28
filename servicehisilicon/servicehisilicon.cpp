@@ -5,6 +5,7 @@
 #include <lib/base/nconfig.h>
 #include <lib/base/object.h>
 #include <lib/dvb/epgcache.h>
+#include <lib/dvb/decoder.h>
 #include <lib/components/file_eraser.h>
 #include <lib/gui/esubtitle.h>
 #include <lib/service/service.h>
@@ -2085,7 +2086,7 @@ void eServiceHisilicon::setAC3Delay(int delay)
 		int config_delay_int = delay;
 
 		config_delay_int += eConfigManager::getConfigIntValue("config.av.generalAC3delay");
-		/* TODO */
+		eTSMPEGDecoder::setHwAC3Delay(config_delay_int);
 	}
 }
 
@@ -2098,8 +2099,7 @@ void eServiceHisilicon::setPCMDelay(int delay)
 	{
 		int config_delay_int = delay;
 		config_delay_int += eConfigManager::getConfigIntValue("config.av.generalPCMdelay");
-
-		/* TODO */
+		eTSMPEGDecoder::setHwPCMDelay(config_delay_int);
 	}
 }
 /* cuesheet CVR */
