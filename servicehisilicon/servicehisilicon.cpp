@@ -81,6 +81,12 @@ eServiceFactoryHisilicon::eServiceFactoryHisilicon()
 		extensions.push_back("ogv");
 		extensions.push_back("stream");
 		extensions.push_back("webm");
+		extensions.push_back("amr");
+		extensions.push_back("au");
+		extensions.push_back("mid");
+		extensions.push_back("wv");
+		extensions.push_back("pva");
+		extensions.push_back("wtv");
 		sc->removeServiceFactory(0x1001); /* servicemp3 */
 		sc->addServiceFactory(eServiceFactoryHisilicon::id, this, extensions);
 	}
