@@ -1218,89 +1218,53 @@ const char *eServiceHisilicon::getVidFormatStr(uint32_t format)
 	case HI_FORMAT_VIDEO_MPEG2:
 		return "MPEG2";
 		break;
-
 	case HI_FORMAT_VIDEO_MPEG4:
 		return "MPEG4";
 		break;
-
 	case HI_FORMAT_VIDEO_AVS:
 		return "AVS";
 		break;
-
 	case HI_FORMAT_VIDEO_H263:
 		return "H263";
 		break;
-
 	case HI_FORMAT_VIDEO_H264:
 		return "H264";
 		break;
-
 	case HI_FORMAT_VIDEO_REAL8:
 		return "REAL8";
 		break;
-
 	case HI_FORMAT_VIDEO_REAL9:
 		return "REAL9";
 		break;
-
 	case HI_FORMAT_VIDEO_VC1:
 		return "VC1";
 		break;
-
 	case HI_FORMAT_VIDEO_VP6:
 		return "VP6";
 		break;
-
-	case HI_FORMAT_VIDEO_DIVX3:
-		return "DIVX3";
+	case HI_FORMAT_VIDEO_VP6F:
+		return "VP6F";
 		break;
-
-	case HI_FORMAT_VIDEO_RAW:
-		return "RAW";
+	case HI_FORMAT_VIDEO_VP6A:
+		return "VP6A";
 		break;
-
-	case HI_FORMAT_VIDEO_JPEG:
-		return "JPEG";
-		break;
-
 	case HI_FORMAT_VIDEO_MJPEG:
 		return "MJPEG";
-		break;
-	case HI_FORMAT_VIDEO_MJPEGB:
-		return "MJPEGB";
 		break;
 	case HI_FORMAT_VIDEO_SORENSON:
 		return "SORENSON";
 		break;
-
-	case HI_FORMAT_VIDEO_VP6F:
-		return "VP6F";
+	case HI_FORMAT_VIDEO_DIVX3:
+		return "DIVX3";
 		break;
-
-	case HI_FORMAT_VIDEO_VP6A:
-		return "VP6A";
+	case HI_FORMAT_VIDEO_RAW:
+		return "RAW";
 		break;
-
+	case HI_FORMAT_VIDEO_JPEG:
+		return "JPEG";
+		break;
 	case HI_FORMAT_VIDEO_VP8:
 		return "VP8";
-		break;
-	case HI_FORMAT_VIDEO_MVC:
-		return "MVC";
-		break;
-	case HI_FORMAT_VIDEO_SVQ1:
-		return "SORENSON1";
-		break;
-	case HI_FORMAT_VIDEO_SVQ3:
-		return "SORENSON3";
-		break;
-	case HI_FORMAT_VIDEO_DV:
-		return "DV";
-		break;
-	case HI_FORMAT_VIDEO_WMV1:
-		return "WMV1";
-		break;
-	case HI_FORMAT_VIDEO_WMV2:
-		return "WMV2";
 		break;
 	case HI_FORMAT_VIDEO_MSMPEG4V1:
 		return "MICROSOFT MPEG4V1";
@@ -1308,8 +1272,11 @@ const char *eServiceHisilicon::getVidFormatStr(uint32_t format)
 	case HI_FORMAT_VIDEO_MSMPEG4V2:
 		return "MICROSOFT MPEG4V2";
 		break;
-	case HI_FORMAT_VIDEO_CINEPAK:
-		return "CINEPACK";
+	case HI_FORMAT_VIDEO_WMV1:
+		return "WMV1";
+		break;
+	case HI_FORMAT_VIDEO_WMV2:
+		return "WMV2";
 		break;
 	case HI_FORMAT_VIDEO_RV10:
 		return "RV10";
@@ -1317,16 +1284,67 @@ const char *eServiceHisilicon::getVidFormatStr(uint32_t format)
 	case HI_FORMAT_VIDEO_RV20:
 		return "RV20";
 		break;
+	case HI_FORMAT_VIDEO_SVQ1:
+		return "SORENSON1";
+		break;
+	case HI_FORMAT_VIDEO_SVQ3:
+		return "SORENSON3";
+		break;
+	case HI_FORMAT_VIDEO_VP3:
+		return "VP3";
+		break;
+	case HI_FORMAT_VIDEO_VP5:
+		return "VP5";
+		break;
+	case HI_FORMAT_VIDEO_CINEPAK:
+		return "CINEPACK";
+		break;
+	case HI_FORMAT_VIDEO_INDEO3:
+		return "INDEO2";
+		break;
+	case HI_FORMAT_VIDEO_INDEO3:
+		return "INDEO3";
+		break;
 	case HI_FORMAT_VIDEO_INDEO4:
 		return "INDEO4";
 		break;
 	case HI_FORMAT_VIDEO_INDEO5:
 		return "INDEO5";
 		break;
+	case HI_FORMAT_VIDEO_MJPEGB:
+		return "MJPEGB";
+		break;
+	case HI_FORMAT_VIDEO_MVC:
+		return "MVC";
+		break;
 	case HI_FORMAT_VIDEO_HEVC:
 		return "h265";
+		break;
+	case HI_FORMAT_VIDEO_DV:
+		return "DV";
+		break;
+	case HI_FORMAT_VIDEO_HUFFYUV:
+		return "HUFFYUV";
+		break;
+	case HI_FORMAT_VIDEO_DIVX:
+		return "DIVX";
+		break;
+	case HI_FORMAT_VIDEO_REALMAGICMPEG4:
+		return "REALMAGICMPEG4";
+		break;
 	case HI_FORMAT_VIDEO_VP9:
 		return "VP9";
+		break;
+	case HI_FORMAT_VIDEO_WMV3:
+		return "WMV3";
+		break;
+	case HI_FORMAT_VIDEO_AVS2:
+		return "AVS2";
+		break;
+	case HI_FORMAT_VIDEO_BUTT:
+		return "BUTT";
+		break;
+
 	default:
 		return "UNKNOWN";
 		break;
@@ -1498,9 +1516,18 @@ const char *eServiceHisilicon::getAudFormatStr(uint32_t format)
 	case HI_FORMAT_AUDIO_DRA:
 		return "DRA";
 		break;
+	case HI_FORMAT_AUDIO_AC4:
+		return "AC4";
+		break;
+	case HI_FORMAT_AUDIO_DTS_EXPRESS:
+		return "DTS_EXPRESS";
+		break;
 
 	case HI_FORMAT_AUDIO_PCM: /* various PCM "codecs" */
 		return "PCM";
+		break;
+	case HI_FORMAT_AUDIO_PCM_BLURAY:
+		return "PCM_BLURAY";
 		break;
 
 	case HI_FORMAT_AUDIO_ADPCM: /* various ADPCM codecs */
@@ -1546,9 +1573,11 @@ const char *eServiceHisilicon::getAudFormatStr(uint32_t format)
 	case HI_FORMAT_AUDIO_G729AB:
 		return "G729AB";
 		break;
-	case HI_FORMAT_AUDIO_PCM_BLURAY:
-		return "PCM_BLURAY";
+
+	case HI_FORMAT_AUDIO_OPUS:
+		return "OPUS";
 		break;
+
 	default:
 		break;
 	}
