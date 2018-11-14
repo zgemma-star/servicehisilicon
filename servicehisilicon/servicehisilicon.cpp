@@ -1299,7 +1299,7 @@ const char *eServiceHisilicon::getVidFormatStr(uint32_t format)
 	case HI_FORMAT_VIDEO_CINEPAK:
 		return "CINEPACK";
 		break;
-	case HI_FORMAT_VIDEO_INDEO3:
+	case HI_FORMAT_VIDEO_INDEO2:
 		return "INDEO2";
 		break;
 	case HI_FORMAT_VIDEO_INDEO3:
