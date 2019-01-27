@@ -270,7 +270,7 @@ private:
 
 	RESULT seekToImpl(pts_t to);
 
-	int m_aspect, m_width, m_height, m_framerate, m_progressive;
+	int m_aspect, m_width, m_height, m_framerate, m_progressive, m_gamma;
 	int m_bitrate;
 	std::string m_useragent;
 	std::string m_extra_headers;
