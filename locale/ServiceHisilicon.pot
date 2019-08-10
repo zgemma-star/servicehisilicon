@@ -1,0 +1,35 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ServiceHisilicon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-05 19:08+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: openspa <openspateam@gmail.com>\n"
+"Language-Team: OpenSPA <openspa.info>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2\n"
+
+#: plugin.py:19 plugin.py:61
+msgid "ServiceHisilicon Setup"
+msgstr ""
+
+#: plugin.py:26
+msgid "Enable ServiceHisilicon (Need restart GUI):"
+msgstr ""
+
+#: plugin.py:31
+msgid "Cancel"
+msgstr ""
+
+#: plugin.py:32
+msgid "Ok"
+msgstr ""
+
+#: plugin.py:61
+msgid "Enable/Disable hisilicon libraries for multimedia player."
+msgstr ""

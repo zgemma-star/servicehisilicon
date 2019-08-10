@@ -23,9 +23,12 @@ if test x"$with_binarycompatibledebug" = xyes ; then
 	AC_DEFINE([BINARY_COMPATIBLE_DEBUGLOG])
 fi
 
+AC_PATH_PROG(MSGFMT, msgfmt, AC_MSG_ERROR(Could not find msgfmt))
+
 AC_CONFIG_FILES([
 Makefile
 servicehisilicon/Makefile
 plugin/Makefile
+locale/Makefile
 ])
 AC_OUTPUT
