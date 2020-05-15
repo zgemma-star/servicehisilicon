@@ -385,6 +385,11 @@ void eServiceHisilicon::video_event(int)
 				eDebug("[eServiceHisilicon] PROGRESSIVE_CHANGED %d", m_progressive);
 				m_event((iPlayableService*)this, evVideoProgressiveChanged);
 			}
+			else if (evt.type == 17 /*VIDEO_EVENT_GAMMA_CHANGED*/)
+			{
+				m_gamma = evt.u.frame_rate;
+				eDebug("[eServiceHisilicon] GAMMA_CHANGED %d", m_gamma);
+				m_event((iPlayableService*)this, evVideoGammaChanged);
 			else
 				eDebug("[eServiceHisilicon] unhandled DVBAPI Video Event %d", evt.type);
 		}
@@ -703,7 +708,7 @@ eServiceHisilicon::eServiceHisilicon(eServiceReference ref):
 	m_errorInfo.missing_codec = "";
 
 	CONNECT(m_nownext_timer->timeout, eServiceHisilicon::updateEpgCacheNowNext);
-	m_aspect = m_width = m_height = m_framerate = m_progressive = -1;
+	m_aspect = m_width = m_height = m_framerate = m_progressive = m_gamma = -1;
 
 	m_state = stIdle;
 	eDebug("[eServiceHisilicon] construct!");
@@ -1127,6 +1132,7 @@ int eServiceHisilicon::getInfo(int w)
 	case sVideoWidth: return m_width;
 	case sFrameRate: return m_framerate;
 	case sProgressive: return m_progressive;
+	case sGamma: return m_gamma;
 	case sAspect: return m_aspect;
 	case sTagTitle:
 	case sTagArtist:
