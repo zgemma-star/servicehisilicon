@@ -390,6 +390,7 @@ void eServiceHisilicon::video_event(int)
 				m_gamma = evt.u.frame_rate;
 				eDebug("[eServiceHisilicon] GAMMA_CHANGED %d", m_gamma);
 				m_event((iPlayableService*)this, evVideoGammaChanged);
+			}
 			else
 				eDebug("[eServiceHisilicon] unhandled DVBAPI Video Event %d", evt.type);
 		}
